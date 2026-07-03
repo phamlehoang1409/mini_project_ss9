@@ -9,9 +9,9 @@ flights_db = [
 ]
 
 class them(BaseModel):
-    flight_number : str
-    destination : str
-    available_seats : int
+    flight_number : str(..., max_length=10)
+    destination : str(..., max_length=50)
+    available_seats : int(..., ge=0, le=200)
 
 
 
